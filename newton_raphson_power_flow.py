@@ -203,10 +203,10 @@ df1.to_csv('NRPF_result.csv', encoding='utf-8', index=False)
 # ---------------------- plot ----------------------------------
 plt.figure(figsize=(20,10))
 plt.title('NR-PF Result')
-fig, ax1 = plt.subplot()
-ax1.plt.plot(Bus_num,VM,'b', label='Vpu')
+fig, ax1 = plt.subplots()
+ax1.plot(Bus_num, VM, 'b', label='Vpu')
 ax2 = ax1.twinx()
-ax2.plt.plot(Bus_num,Angle,'r', label='Theta')
-plt.legend(loc='best')
-plt.show
+ax2.plot(Bus_num, Angle, 'r', label='Theta')
+fig.legend(loc='upper right')
+plt.show()
 # ----------------------------------------
